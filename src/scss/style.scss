@@ -304,6 +304,9 @@ select {
         font-size: 16px;
         line-height: 100%;
         color: #000000;
+        &:hover {
+            color: #EE741D;
+        }
     }
 }
 
@@ -381,7 +384,7 @@ select {
     display: block;
     max-width: 190px;
     width: 100%;
-    padding: 15px 0 16px 0;
+    padding: 17px 0 14px 0;
     font-weight: bold;
     font-size: 10px;
     line-height: 100%;
@@ -442,7 +445,12 @@ select {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 640px;
+    height: 0;
+    padding-bottom: 3.7368%;
+    outline: none;
+    img {
+        @include imgProp;
+    }
 }
 
 .slide-img {
@@ -569,6 +577,9 @@ section {
     margin-bottom: 13px;
     img {
         @include imgProp;
+        width: 98%;
+        height: 98%;
+        margin: auto;
     }
 }
 
