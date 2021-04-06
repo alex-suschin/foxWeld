@@ -1,17 +1,100 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-@@include('components/page/_1_head.html',{ 'title': 'Заголовок', 'description': 'Описание', 'keywords': 'Ключевые слова', 'favicon': 'img/favicon/favicon.png' })
+@@include('components/page/_1_head.html',{ 'title': 'FoxWeld', 'description': 'Описание', 'keywords': 'Ключевые слова', 'favicon': 'img/favicon/favicon.png' })
 
 <body>
     <div class="wrapper">
         @@include('components/page/_2_header.html')
 
-        <div class="top-wrap">
-            <div class="container">
-                
+        <section class="slider-top">
+            <div class="slider-top__item" style="background-image: url(img/top-sl-1.jpg);">
+                <div class="slide-content">
+                    <div class="container">
+                        <div class="title">Надёжный<br> помошник в работе</div>
+                        <a class="btn-orange" href="#">ПОДРОБНЕЕ</a>
+                    </div>
+                </div>
             </div>
-        </div>
+            <div class="slider-top__item" style="background-image: url(img/top-sl-1.jpg);">
+                <div class="slide-content">
+                    <div class="container">
+                        <div class="title">Надёжный<br> помошник в работе</div>
+                        <a class="btn-orange" href="#">ПОДРОБНЕЕ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-top__item" style="background-image: url(img/top-sl-1.jpg);">
+                <div class="slide-content">
+                    <div class="container">
+                        <div class="title">Надёжный<br> помошник в работе</div>
+                        <a class="btn-orange" href="#">ПОДРОБНЕЕ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-top__item" style="background-image: url(img/top-sl-1.jpg);">
+                <div class="slide-content">
+                    <div class="container">
+                        <div class="title">Надёжный<br> помошник в работе</div>
+                        <a class="btn-orange" href="#">ПОДРОБНЕЕ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="exs">
+            <div class="container">
+                <div class="exs-items">
+                    <div class="exs-item">
+                        <div class="exs-item-img"><img src="img/ex-1.svg" alt=""></div>
+                        <div class="exs-item-text">Обучение персонала
+                        </div>
+                    </div>
+                    <div class="exs-item">
+                        <div class="exs-item-img"><img src="img/ex-2.svg" alt=""></div>
+                        <div class="exs-item-text">Рекламная поддержка
+                        </div>
+                    </div>
+                    <div class="exs-item">
+                        <div class="exs-item-img"><img src="img/ex-3.svg" alt=""></div>
+                        <div class="exs-item-text">Высокое качество продукции
+                        </div>
+                    </div>
+                    <div class="exs-item">
+                        <div class="exs-item-img"><img src="img/ex-4.svg" alt=""></div>
+                        <div class="exs-item-text">Индивидуальные условия работы
+                        </div>
+                    </div>
+                    <div class="exs-item">
+                        <div class="exs-item-img"><img src="img/ex-5.svg" alt=""></div>
+                        <div class="exs-item-text">Доставка до торговой точки
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-products">
+            <div class="container">
+                <div class="popular-products-top">
+                    <div class="title">Популярные товары</div>
+                    <a href="#">смотреть весь каталог</a>
+                </div>
+
+                <div class="products-items">
+                    <div class="products-item">
+                        <div class="products-item-img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="products-item-title">Сварочный полуавтомат Invermig 205</div>
+                        <div class="products-item-code"><span>Артикул:</span> 6378</div>
+                        <div class="products-item-series"><span>Серия:</span> FoxWeld</div>
+                        <div class="products-price">37 000 руб.</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
         @@include('components/page/_3_footer.html')
     </div>

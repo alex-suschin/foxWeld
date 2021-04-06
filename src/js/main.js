@@ -1,27 +1,4 @@
-Number.isNaN = Number.isNaN || function(value) {
-    return typeof value === 'number' && isNaN(value);
-}
-
 $(function() {
-
-    $(window).scroll(function() {
-        if ($(window).width() > '991') {
-            if ($(this).scrollTop() > 90) {
-                $('.header').addClass('fixed');
-                $('body').css('padding-top', '90px');
-            } else if ($(this).scrollTop() < 90) {
-                $('.header').removeClass('fixed');
-                $('body').css('padding-top', '0');
-            }
-        }
-    });
-
-    jQuery("a.scrollto").click(function() {
-        elementClick = jQuery(this).attr("href")
-        destination = jQuery(elementClick).offset().top;
-        jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 700);
-        return false;
-    });
 
     $('#hamburger-icon').click(function() {
         $(this).toggleClass('active');
@@ -45,6 +22,14 @@ $(function() {
         $(this).addClass('active');
         $('.styles-elems').find('.styles-elem-item').hide();
         $('#' + $(this).data('switch')).show();
+    });
+
+    $('.slider-top').slick({
+        infinite: true,
+        arrows: false,
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
     });
 
 
