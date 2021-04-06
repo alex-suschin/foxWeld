@@ -32,6 +32,14 @@ $(function() {
         slidesToScroll: 1
     });
 
+    $('.news-slider').slick({
+        infinite: true,
+        dots: false,
+        slidesToShow: 3,
+        swipeToSlide: true,
+        slidesToScroll: 1
+    });
+
 
 });
 

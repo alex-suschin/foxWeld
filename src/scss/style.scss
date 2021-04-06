@@ -609,7 +609,7 @@ section {
 }
 
 .about {
-    padding: 120px 0 110px 0;
+    padding: 120px 0 103px 0;
     margin-bottom: 116px;
     background: #FAFAFA;
     .title {
@@ -673,6 +673,280 @@ section {
     text-align: center;
     text-transform: uppercase;
     color: #000000;
+}
+
+.news-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    .title {
+        margin-bottom: 0;
+    }
+    a {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 100%;
+        text-decoration-line: underline;
+        color: #000000;
+    }
+}
+
+.news-img {
+    position: relative;
+    height: 0;
+    padding-bottom: 47.552%;
+    margin-bottom: 18px;
+    border-radius: 4px;
+    img {
+        border-radius: 4px;
+        @include imgProp;
+    }
+}
+
+.news-date {
+    padding: 0 0 0 21px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 120%;
+    color: #9E9E9E;
+    background: url(../img/clock-orange.svg) no-repeat left center;
+    margin-bottom: 12px;
+}
+
+.news-title {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 130%;
+    color: #000000;
+    margin-bottom: 11px;
+}
+
+.news-slider {
+    margin: 0 -15px;
+    .slick-next {
+        right: -60px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        background: rgba(0, 0, 0, 0.33);
+        z-index: 2;
+        opacity: 1;
+        top: 116px;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            left: 2px;
+            bottom: 0;
+            background: url(../img/sl-next.svg) no-repeat center;
+            opacity: 1;
+        }
+    }
+    .slick-prev {
+        left: -60px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        background: rgba(0, 0, 0, 0.33);
+        z-index: 2;
+        opacity: 1;
+        top: 116px;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: url(../img/sl-prev.svg) no-repeat center;
+            opacity: 1;
+        }
+    }
+}
+
+.news-slider__item {
+    max-width: 490px;
+    width: 100%;
+    outline: none;
+    margin: 0 15px;
+    a {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 120%;
+        color: #000000;
+    }
+    i {
+        display: inline-block;
+        vertical-align: top;
+        width: 21px;
+        height: 21px;
+        border: 1px solid #000000;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        background-image: url(../img/arr-small-black.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        margin-left: 8px;
+        @include transition;
+    }
+}
+
+.news-slider__item a:hover i {
+    background-color: #EE741D;
+    border-color: #EE741D;
+    background-image: url(../img/arr-small-white.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.news {
+    margin-bottom: 97px;
+}
+
+.bottom-line {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        display: block;
+        max-width: 158px;
+    }
+}
+
+.bottom-line__left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer {
+    padding: 24px 0 0 0;
+    border-top: 1px solid #EAEAEA;
+    background: #FAFAFA;
+    ul {
+        li {
+            margin-bottom: 12px;
+        }
+        a {
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 100%;
+            color: #000000;
+        }
+    }
+    .address,
+    .mail,
+    .worktime {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 100%;
+        color: #000000;
+        margin-right: 0;
+    }
+    .social {
+        margin-bottom: 18px;
+    }
+    .address {
+        margin-bottom: 21px;
+    }
+    .mail {
+        margin-bottom: 20px;
+    }
+    .worktime {
+        margin-bottom: 15px;
+    }
+    .btn-orange {
+        max-width: 125px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 100%;
+        padding: 5px 0 5px 0;
+        letter-spacing: 0;
+        text-transform: none;
+    }
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 19px;
+    border-bottom: 1px solid #EDEDED;
+}
+
+.footer-info__left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 60%;
+    ul:first-child {
+        margin-right: 111px;
+    }
+    ul:nth-child(2) {
+        column-count: 3;
+    }
+}
+
+.footer-info__right {
+    width: 39%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.copyright__left {
+    a {
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 100%;
+        color: #676767;
+        margin-right: 27px;
+    }
+    span {
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 100%;
+        color: #676767;
+    }
+}
+
+.copyright__right {
+    a {
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 100%;
+        color: #676767;
+    }
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0 20px 0;
 }
 
 
@@ -871,10 +1145,7 @@ section {
 
 @media screen and (min-width:992px) {
     .btn-orange:hover {
-        background: #ec4824;
-    }
-    .modal-close:hover {
-        opacity: 0.7;
+        background: #FF8E3E;
     }
 }
 
