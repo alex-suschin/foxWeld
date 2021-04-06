@@ -272,7 +272,6 @@ select {
 }
 
 .header-bottom {
-    padding: 25px 0 26px 0;
     .container {
         display: flex;
         justify-content: space-between;
@@ -298,6 +297,8 @@ select {
         }
     }
     a {
+        display: block;
+        padding: 34px 0 31px 0;
         position: relative;
         font-weight: 500;
         font-size: 16px;
@@ -310,20 +311,32 @@ select {
     content: '';
     display: block;
     position: absolute;
-    top: 9px;
+    top: 46%;
     right: -18px;
-    width: 10px;
-    height: 7px;
-    background: url(../img/sub-arr.svg) no-repeat center;
+    width: 5px;
+    height: 5px;
+    border-top: 1.5px solid #000;
+    border-right: 1.5px solid #000;
     @include transition;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+}
+
+.sub:hover>a {
+    color: #EE741D;
 }
 
 .sub:hover::after {
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
+    top: 51%;
+    border-color: #EE741D;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
 }
 
 .sub-menu {
@@ -332,10 +345,27 @@ select {
     overflow: hidden;
     max-height: 0;
     background: #fff;
-    padding: 0 20px;
-    min-width: 200px;
-    transform: translate(-28px, 0px);
+    min-width: 238px;
     transition: .3s;
+    li:first-child {
+        padding-top: 17px;
+        border-top: 1px solid #EE741D;
+    }
+    li {
+        margin-right: 0;
+        padding: 0 18px 0 18px;
+        margin-bottom: 20px;
+    }
+    a {
+        padding: 0;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 100%;
+        color: #616161;
+        &:hover {
+            color: #000;
+        }
+    }
 }
 
 .menu li.sub:hover ul.sub-menu {
