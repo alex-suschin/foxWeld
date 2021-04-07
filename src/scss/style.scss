@@ -1313,7 +1313,7 @@ section {
         right: 0;
         width: 100vw;
         margin: 0;
-        width: 95%;
+        width: 92%;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -1456,6 +1456,7 @@ section {
     .sub-menu {
         min-height: initial;
         display: none;
+        border-bottom: 1px solid #EAEAEA;
     }
     .sub::after {
         top: 4px;
@@ -1608,11 +1609,168 @@ section {
     }
 }
 
-@media screen and (max-width: 767px) {
-    .container {
-        width: 320px;
+@media screen and (max-width: 740px) {
+    .catalog-items {
+        justify-content: center;
     }
-    .modal-content {
-        margin: 0 15px;
+    .catalog-item {
+        width: 47%;
+        height: 136px;
+        margin: 0 8px;
+        margin-bottom: 16px;
+    }
+    .catalog-item:nth-child(3n) {
+        margin: 0 8px;
+        margin-bottom: 16px;
+    }
+    .catalog-item:nth-child(4n),
+    .catalog-item:nth-child(5n) {
+        margin: 0 8px;
+        margin-bottom: 16px;
+    }
+    .catalog .container {
+        padding: 0 8px;
+    }
+    .products-item {
+        max-width: 230px;
+        width: 100%;
+    }
+    .products-items {
+        margin: 0 -16px;
+        .slick-list {
+            padding: 0 16px 10px 16px;
+        }
+    }
+    .products-item,
+    .products-item:nth-child(3n),
+    .products-item:nth-child(4n),
+    .products-item:nth-child(5n) {
+        margin: 0 10px;
+    }
+    .popular-products {
+        padding: 40px 0 71px 0;
+    }
+    .popular-products-top a {
+        position: absolute;
+        left: 16px;
+        bottom: -35px;
+    }
+    .news-slider__item {
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    .news-slider {
+        margin: 0;
+    }
+    .about {
+        display: none;
+    }
+    .exs-items {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .exs-item {
+        margin-bottom: 30px;
+    }
+    .exs-item-img {
+        margin-bottom: 12px;
+    }
+    .exs {
+        padding: 66px 0 30px 0;
+    }
+    body .title {
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 100%;
+    }
+    .news-slider__item {
+        display: none;
+    }
+    .news-slider__item:first-child,
+    .news-slider__item:nth-child(2),
+    .news-slider__item:nth-child(3) {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .slider-top__item {
+        padding-bottom: 8.6112%;
+        padding-bottom: 17.2223%;
+        // padding-bottom: 0;
+        // min-height: 496px;
+    }
+    .slide-content {
+        padding-top: 45px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+        padding-bottom: 53px;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        .btn-orange {
+            max-width: 100%;
+        }
+        .title {
+            width: 100%;
+        }
+    }
+    .slider-top.slick-dotted .slick-dots {
+        bottom: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
+    }
+    .slider-top.slick-dotted .slick-dots li,
+    .slider-top.slick-dotted .slick-dots li button {
+        width: 9px;
+        height: 9px;
+    }
+    .slider-top.slick-dotted .slick-dots li {
+        margin: 0 22.5px 0 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .catalog-item {
+        padding: 30px 10px 20px 10px;
+        width: 44.74%;
+        min-height: 136px;
+        justify-content: center;
+    }
+    .catalog-item-img img {
+        width: 50%;
+    }
+    .catalog-item-name {
+        font-weight: 500;
+        font-size: 8px;
+        line-height: 130%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #000000;
+    }
+    .footer .address,
+    .footer .worktime,
+    .footer .mail,
+    .footer .btn-orange {
+        margin-bottom: 30px;
+    }
+    .catalog {
+        padding: 60px 0 34px 0;
+    }
+    .news-top a {
+        position: absolute;
+        left: 16px;
+        bottom: -60px;
+    }
+    .news {
+        margin-bottom: 0;
+        padding-bottom: 76px;
     }
 }
