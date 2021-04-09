@@ -69,6 +69,17 @@ $('.menu .js-sub').click(function(e) {
     }
 });
 
+$('.categories-item-title').click(function() {
+    $(this).toggleClass('active');
+    $(this).siblings('ul').slideToggle();
+});
+
+$('.categories-item li').click(function(e) {
+    e.preventDefault();
+    $('.categories-item li').removeClass('active');
+    $(this).addClass('active');
+});
+
 
 $(window).on('load resize', function() {
 
