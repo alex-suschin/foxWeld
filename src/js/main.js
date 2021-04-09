@@ -80,6 +80,32 @@ $('.categories-item li').click(function(e) {
     $(this).addClass('active');
 });
 
+$('.info-tovar--photos').sliderPro({
+    width: 490,
+    height: 488,
+    orientation: 'vertical',
+    loop: false,
+    arrows: true,
+    buttons: false,
+    thumbnailsPosition: 'left',
+    thumbnailPointer: true,
+    thumbnailWidth: 154,
+    thumbnailHeight: 154,
+    breakpoints: {
+        1200: {
+            orientation: 'horizontal',
+            thumbnailsPosition: 'bottom',
+            thumbnailWidth: 120
+        },
+        575: {
+            orientation: 'horizontal',
+            thumbnailsPosition: 'bottom',
+            thumbnailWidth: 66,
+            thumbnailHeight: 60,
+        }
+    }
+});
+
 
 $(window).on('load resize', function() {
 
