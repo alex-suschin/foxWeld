@@ -76,8 +76,64 @@
                         <label for="message">Текст сообщения</label>
                         <textarea name="message" id="message"></textarea>
                     </div>
-                    <button class="btn-orange">отправить</button>
+                    <button class="btn-orange" type="submit">отправить</button>
                 </form>
+            </div>
+        </section>
+
+        <section class="partners">
+            <div class="container">
+                <div class="title">Адреса наших партнёров</div>
+
+                <div class="partners-items">
+                    <div class="partners-item">
+                        <div class="partners-item-title">ИП Кузнецов Александр Васильевич</div>
+                        <div class="partners-item-address">г. Тольятти ул. Степана Разина д. 97</div>
+                        <div class="partners-item-shop">маг. СтройДвор </div>
+                        <div class="partners-item-desc">ТК МегаСТРОЙ- Широкий ассортимент предлагаемой продукции</div>
+                    </div>
+                    <div class="partners-item">
+                        <div class="partners-item-title">ООО «Партнер»</div>
+                        <div class="partners-item-address">г. Тольятти ул. Степана Разина д. 97</div>
+                        <a href="tel:+74742717879">+7 (4742) 71-78-79</a>
+                        <a href="mailto:partner.lip@inbox.ru">partner.lip@inbox.ru</a>
+                        <div class="partners-item-desc">partnerlip.ru</div>
+                    </div>
+                    <div class="partners-item">
+                        <div class="partners-item-title">ООО «ПРОМСВАРКОМПЛЕКТ</div>
+                        <div class="partners-item-address">г. Тамбов ул. Энергетиков д.30</div>
+                    </div>
+                </div>
+
+                <a href="#" class="btn-more-dealers">Показать список дилеров</a>
+            </div>
+        </section>
+
+        <section class="map-wrap">
+            <div class="map" id="map"></div>
+            <div class="container">
+                <div class="map-contacts">
+                    <div class="map-contacts-item">
+                        <b>Дилер:</b>
+                        <span>ООО «Партнер»</span>
+                    </div>
+                    <div class="map-contacts-item">
+                        <b>Эл. почта:</b>
+                        <a href="mailto:partner.lip@inbox.ru">partner.lip@inbox.ru</a>
+                    </div>
+                    <div class="map-contacts-item">
+                        <b>Адрес:</b>
+                        <span>г. Липецк ул. Лесная д.2</span>
+                    </div>
+                    <div class="map-contacts-item">
+                        <b>Сайт:</b>
+                        <a href="partnerlip.ru" target="_blank">partnerlip.ru</a>
+                    </div>
+                    <div class="map-contacts-item">
+                        <b>Телефон:</b>
+                        <a href="tel:+74742717879">+7 (4742) 71-78-79</a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -97,10 +153,13 @@
             </div>
         </section>
 
+
+
         @@include('components/page/_3_footer.html')
     </div>
 
     @@include('components/page/_4_scripts.html')
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 </body>
 
 </html>

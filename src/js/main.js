@@ -1,5 +1,22 @@
 $(function() {
 
+    $(window).on('load', function() {
+        let phones = [
+            { 'mask': '+7 \\ \\ ###-###-##-##' }
+        ];
+
+        $('input[type=tel]').inputmask({
+            mask: phones,
+            greedy: false,
+            definitions: {
+                '#': {
+                    validator: '[0-9]',
+                    cardinality: 1
+                }
+            }
+        });
+    });
+
     $('#hamburger-icon').click(function() {
         $(this).toggleClass('active');
         if ($(this).hasClass('active')) {
@@ -32,6 +49,32 @@ $(function() {
         slidesToScroll: 1
     });
 
+    ymaps.ready(function() {
+        var myMap = new ymaps.Map('map', {
+                center: [51.675628, 39.201276],
+                zoom: 17,
+                scrollZoom: false,
+                controls: ['zoomControl']
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+
+            myPlacemark = new ymaps.Placemark([51.675578, 39.203287], {
+                hintContent: 'Россия, Воронеж ул. Кольцовская 9а, оф. 626',
+                balloonContent: 'Россия, Воронеж ул. Кольцовская 9а, оф. 626'
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/map-marker.svg',
+                iconImageSize: [48, 61],
+                cursor: 'pointer',
+                iconImageOffset: [-30, -120],
+                balloonclose: true
+            });
+        myMap.behaviors.disable('scrollZoom');
+        myMap.geoObjects
+            .add(myPlacemark)
+
+    });
 
 
 
