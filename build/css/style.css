@@ -145,11 +145,11 @@ img {
 .wrapper {
   position: relative; }
 
-.content ul:not(.breadcrumbs) {
+.content ul:not(.breadcrumbs):not(.page-list) {
   list-style: none;
   margin: 0;
   padding: 0; }
-  .content ul:not(.breadcrumbs) li {
+  .content ul:not(.breadcrumbs):not(.page-list) li {
     position: relative;
     font-weight: normal;
     font-size: 12px;
@@ -157,7 +157,7 @@ img {
     color: #000000;
     padding: 0 0 0 7px;
     margin-bottom: 12px; }
-    .content ul:not(.breadcrumbs) li:before {
+    .content ul:not(.breadcrumbs):not(.page-list) li:before {
       content: '';
       display: block;
       position: absolute;
@@ -2091,6 +2091,10 @@ section .title {
   .slide-content .title {
     font-size: 35px; } }
 
+@media screen and (max-width: 1562px) {
+  .news-slider__item {
+    width: 31.5%; } }
+
 @media screen and (max-width: 1500px) {
   .card-desc {
     padding-left: 30px; } }
@@ -2231,7 +2235,14 @@ section .title {
   .card-desc {
     padding-left: 0; }
   .card-title {
-    width: 100%; } }
+    width: 100%; }
+  .news-slider__item {
+    max-width: initial;
+    width: 47%; }
+  .news-wrap .news-slider__item:nth-child(3n) {
+    margin: 0 30px 60px 0; }
+  .news-wrap .news-slider__item:nth-child(2n) {
+    margin-right: 0; } }
 
 @media screen and (max-width: 1045px) {
   .similar-items .products-item {
@@ -2679,6 +2690,8 @@ section .title {
   .news-slider__item:first-child,
   .news-slider__item:nth-child(2),
   .news-slider__item:nth-child(3) {
+    display: block; }
+  .news-wrap .news-slider__item {
     display: block; } }
 
 @media screen and (max-width: 640px) {
@@ -2727,7 +2740,12 @@ section .title {
   .slider-top.slick-dotted .slick-dots li {
     margin: 0 22.5px 0 0; }
   .breadcrumbs li {
-    margin-bottom: 8px; } }
+    margin-bottom: 8px; }
+  .news-wrap .news-slider__item {
+    width: 100%;
+    margin: 0 0 30px 0; }
+  .news-wrap .news-slider__item:nth-child(3n) {
+    margin: 0 0 30px 0; } }
 
 @media screen and (max-width: 575px) {
   .card-title {
@@ -2797,7 +2815,20 @@ section .title {
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg); }
   .card-chars {
-    padding-bottom: 5px; } }
+    padding-bottom: 5px; }
+  .vacancy-name {
+    font-size: 16px;
+    line-height: 100%;
+    margin-bottom: 20px; }
+  .content .vacancy-item b {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    margin-bottom: 17px; }
+  .content ul:not(.breadcrumbs):not(.page-list) li {
+    line-height: 130%; }
+  .content ul:not(.breadcrumbs):not(.page-list) {
+    margin-bottom: 28px; } }
 
 @media screen and (max-width: 550px) {
   .catalog-item {
