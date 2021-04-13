@@ -2277,6 +2277,9 @@ section {
 }
 
 @media screen and (max-width: 991px) {
+    .btn-orange:active {
+        background: #FF8E3E;
+    }
     #hamburger-icon {
         display: block;
         margin-left: 25px;
@@ -2676,7 +2679,12 @@ section {
         margin: 0;
     }
     .about {
-        display: none;
+        padding: 38px 0 30px 0;
+        p {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 160%;
+        }
     }
     .exs-items {
         flex-direction: column;
@@ -2916,6 +2924,9 @@ section {
     }
     .form-wrap {
         padding: 38px 0 40px 0;
+    }
+    .news .news-slider__item {
+        width: 100%;
     }
 }
 

@@ -2282,6 +2282,8 @@ section .title {
     font-size: 14px; } }
 
 @media screen and (max-width: 991px) {
+  .btn-orange:active {
+    background: #FF8E3E; }
   #hamburger-icon {
     display: block;
     margin-left: 25px; }
@@ -2691,7 +2693,11 @@ section .title {
   .news-slider {
     margin: 0; }
   .about {
-    display: none; }
+    padding: 38px 0 30px 0; }
+    .about p {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 160%; }
   .exs-items {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2918,7 +2924,9 @@ section .title {
   .form-callback .form-item textarea {
     min-height: 241px; }
   .form-wrap {
-    padding: 38px 0 40px 0; } }
+    padding: 38px 0 40px 0; }
+  .news .news-slider__item {
+    width: 100%; } }
 
 @media screen and (max-width: 550px) {
   .catalog-item {
