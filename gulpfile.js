@@ -147,7 +147,7 @@ gulp.task('js',
     )
 );
 
-gulp.task('tinypng', function() {
+gulp.task('tinypng', async function() {
     gulp.src('src/img/**/*.{png,jpg,jpeg}')
         .pipe(tinypng({
             key: 'w0n9PwWKqfCQBl1PTbsl7yLv9YVgyrrm',

@@ -329,6 +329,137 @@
     <script src="js/vendor.min.js"></script>
 <script src="js/main.js"></script>
     <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script>
+        $(function() {
+            ymaps.ready(function() {
+                var myMap = new ymaps.Map('map', {
+                        center: [52.300501, 42.729339],
+                        zoom: 7,
+                        scrollZoom: false,
+                        type: 'yandex#hybrid',
+                        controls: ['zoomControl']
+                    }, {
+                        searchControlProvider: 'yandex#search'
+                    }),
+
+                    myPlacemark = new ymaps.Placemark([52.608820, 39.599220], {
+                        hintContent: 'ООО «Партнер»',
+                        balloonContent: `
+                <div class="map-contacts">
+                    <div class="map-contacts-item">
+                        <b>Дилер:</b>
+                        <span>ООО «Партнер»</span>
+                    </div>
+                    <div class="map-contacts-item">
+                        <b>Эл. почта:</b>
+                        <a href="mailto:partner.lip@inbox.ru">partner.lip@inbox.ru</a>
+                    </div>
+                    <div class="map-contacts-item">
+                        <b>Адрес:</b>
+                        <span>г. Липецк ул. Лесная д.2</span>
+                    </div>
+                    <div class="map-contacts-item">
+                        <b>Сайт:</b>
+                        <a href="partnerlip.ru" target="_blank">partnerlip.ru</a>
+                    </div>
+                    <div class="map-contacts-item">
+                        <b>Телефон:</b>
+                        <a href="tel:+74742717879">+7 (4742) 71-78-79</a>
+                    </div>
+                </div>
+                `
+                    }, {
+                        iconLayout: 'default#image',
+                        iconImageHref: '../img/map-marker.svg',
+                        iconImageSize: [48, 61],
+                        cursor: 'pointer',
+                        iconImageOffset: [-25, -61],
+                        balloonclose: true
+                    });
+                myMap.behaviors.disable('scrollZoom');
+                myMap.geoObjects
+                    .add(myPlacemark);
+                myPlacemark.events
+                    .add('mouseenter', function(e) {
+                        e.get('target').options.set('iconImageHref', '../img/map-marker-hover.svg');
+                    })
+
+                .add('mouseleave', function(e) {
+                    e.get('target').options.set('iconImageHref', '../img/map-marker.svg');
+                });
+
+                myPlacemark = new ymaps.Placemark([52.721290, 41.452741], {
+                    hintContent: 'ООО «ПРОМСВАРКОМПЛЕКТ',
+                    balloonContent: `
+                <div class="map-contacts">
+                    <div class="map-contacts-item">
+                        <b>Дилер:</b>
+                        <span>ООО «ПРОМСВАРКОМПЛЕКТ</span>
+                    </div>
+                    <div class="map-contacts-item">
+                        <b>Адрес:</b>
+                        <span>г. Тамбов ул. Энергетиков д.30</span>
+                    </div>
+                </div>
+                `
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: '../img/map-marker.svg',
+                    iconImageSize: [48, 61],
+                    cursor: 'pointer',
+                    iconImageOffset: [-25, -61],
+                    balloonclose: true
+                });
+                myMap.behaviors.disable('scrollZoom');
+                myMap.geoObjects
+                    .add(myPlacemark);
+                myPlacemark.events
+                    .add('mouseenter', function(e) {
+                        e.get('target').options.set('iconImageHref', '../img/map-marker-hover.svg');
+                    })
+
+                .add('mouseleave', function(e) {
+                    e.get('target').options.set('iconImageHref', '../img/map-marker.svg');
+                });
+
+                myPlacemark = new ymaps.Placemark([53.507836, 49.420393], {
+                    hintContent: 'ИП Кузнецов Александр Васильевич',
+                    balloonContent: `
+                    <div class="map-contacts">
+                        <div class="map-contacts-item">
+                            <b>Дилер:</b>
+                            <span>ИП Кузнецов Александр Васильевич</span>
+                        </div>
+                        <div class="map-contacts-item">
+                            <b>Адрес:</b>
+                            <span>г. Тольятти ул. Степана Разина д. 97</span>
+                        </div>
+                    </div>
+                    `
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: '../img/map-marker.svg',
+                    iconImageSize: [48, 61],
+                    cursor: 'pointer',
+                    iconImageOffset: [-25, -61],
+                    balloonclose: true
+                });
+                myMap.behaviors.disable('scrollZoom');
+                myMap.geoObjects
+                    .add(myPlacemark);
+                myPlacemark.events
+                    .add('mouseenter', function(e) {
+                        e.get('target').options.set('iconImageHref', '../img/map-marker-hover.svg');
+                    })
+
+                .add('mouseleave', function(e) {
+                    e.get('target').options.set('iconImageHref', '../img/map-marker.svg');
+                });
+
+
+            });
+        });
+    </script>
 </body>
 
 </html>
