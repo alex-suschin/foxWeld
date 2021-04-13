@@ -61,7 +61,10 @@ $(function() {
         }
     });
 
-
+    $('.btn-cat-mob').click(function(e) {
+        e.preventDefault();
+        $('.catalog-categories').addClass('active');
+    });
 
 
 
