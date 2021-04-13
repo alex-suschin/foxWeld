@@ -49,30 +49,143 @@ $(function() {
         slidesToScroll: 1
     });
 
+    $('.btn-card-text').click(function(e) {
+        $(this).toggleClass('active');
+        e.preventDefault();
+        if ($(this).hasClass('active')) {
+            $(this).text('скрыть');
+            $('.card-text').css('max-height', 'max-content');
+        } else {
+            $(this).text('развернуть');
+            $('.card-text').css('max-height', '88px');
+        }
+    });
+
     ymaps.ready(function() {
         var myMap = new ymaps.Map('map', {
-                center: [51.675628, 39.201276],
-                zoom: 17,
+                center: [52.300501, 42.729339],
+                zoom: 7,
                 scrollZoom: false,
+                type: 'yandex#hybrid',
                 controls: ['zoomControl']
             }, {
                 searchControlProvider: 'yandex#search'
             }),
 
-            myPlacemark = new ymaps.Placemark([51.675578, 39.203287], {
-                hintContent: 'Россия, Воронеж ул. Кольцовская 9а, оф. 626',
-                balloonContent: 'Россия, Воронеж ул. Кольцовская 9а, оф. 626'
+            myPlacemark = new ymaps.Placemark([52.608820, 39.599220], {
+                hintContent: 'ООО «Партнер»',
+                balloonContent: `
+                <div class="map-contacts">
+                    <div class="map-contacts-item">
+                        <b>Дилер:</b>
+                        <span>ООО «Партнер»</span>
+                    </div>
+                    <div class="map-contacts-item">
+                        <b>Эл. почта:</b>
+                        <a href="mailto:partner.lip@inbox.ru">partner.lip@inbox.ru</a>
+                    </div>
+                    <div class="map-contacts-item">
+                        <b>Адрес:</b>
+                        <span>г. Липецк ул. Лесная д.2</span>
+                    </div>
+                    <div class="map-contacts-item">
+                        <b>Сайт:</b>
+                        <a href="partnerlip.ru" target="_blank">partnerlip.ru</a>
+                    </div>
+                    <div class="map-contacts-item">
+                        <b>Телефон:</b>
+                        <a href="tel:+74742717879">+7 (4742) 71-78-79</a>
+                    </div>
+                </div>
+                `
             }, {
                 iconLayout: 'default#image',
                 iconImageHref: '../img/map-marker.svg',
                 iconImageSize: [48, 61],
                 cursor: 'pointer',
-                iconImageOffset: [-30, -120],
+                iconImageOffset: [-25, -61],
                 balloonclose: true
             });
         myMap.behaviors.disable('scrollZoom');
         myMap.geoObjects
-            .add(myPlacemark)
+            .add(myPlacemark);
+        myPlacemark.events
+            .add('mouseenter', function(e) {
+                e.get('target').options.set('iconImageHref', '../img/map-marker-hover.svg');
+            })
+
+        .add('mouseleave', function(e) {
+            e.get('target').options.set('iconImageHref', '../img/map-marker.svg');
+        });
+
+        myPlacemark = new ymaps.Placemark([52.721290, 41.452741], {
+            hintContent: 'ООО «ПРОМСВАРКОМПЛЕКТ',
+            balloonContent: `
+                <div class="map-contacts">
+                    <div class="map-contacts-item">
+                        <b>Дилер:</b>
+                        <span>ООО «ПРОМСВАРКОМПЛЕКТ</span>
+                    </div>
+                    <div class="map-contacts-item">
+                        <b>Адрес:</b>
+                        <span>г. Тамбов ул. Энергетиков д.30</span>
+                    </div>
+                </div>
+                `
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: '../img/map-marker.svg',
+            iconImageSize: [48, 61],
+            cursor: 'pointer',
+            iconImageOffset: [-25, -61],
+            balloonclose: true
+        });
+        myMap.behaviors.disable('scrollZoom');
+        myMap.geoObjects
+            .add(myPlacemark);
+        myPlacemark.events
+            .add('mouseenter', function(e) {
+                e.get('target').options.set('iconImageHref', '../img/map-marker-hover.svg');
+            })
+
+        .add('mouseleave', function(e) {
+            e.get('target').options.set('iconImageHref', '../img/map-marker.svg');
+        });
+
+        myPlacemark = new ymaps.Placemark([53.507836, 49.420393], {
+            hintContent: 'ИП Кузнецов Александр Васильевич',
+            balloonContent: `
+                    <div class="map-contacts">
+                        <div class="map-contacts-item">
+                            <b>Дилер:</b>
+                            <span>ИП Кузнецов Александр Васильевич</span>
+                        </div>
+                        <div class="map-contacts-item">
+                            <b>Адрес:</b>
+                            <span>г. Тольятти ул. Степана Разина д. 97</span>
+                        </div>
+                    </div>
+                    `
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: '../img/map-marker.svg',
+            iconImageSize: [48, 61],
+            cursor: 'pointer',
+            iconImageOffset: [-25, -61],
+            balloonclose: true
+        });
+        myMap.behaviors.disable('scrollZoom');
+        myMap.geoObjects
+            .add(myPlacemark);
+        myPlacemark.events
+            .add('mouseenter', function(e) {
+                e.get('target').options.set('iconImageHref', '../img/map-marker-hover.svg');
+            })
+
+        .add('mouseleave', function(e) {
+            e.get('target').options.set('iconImageHref', '../img/map-marker.svg');
+        });
+
 
     });
 
@@ -138,13 +251,14 @@ $('.info-tovar--photos').sliderPro({
         1200: {
             orientation: 'horizontal',
             thumbnailsPosition: 'bottom',
-            thumbnailWidth: 120
+            thumbnailWidth: 119,
+            thumbnailHeight: 119
         },
         575: {
             orientation: 'horizontal',
             thumbnailsPosition: 'bottom',
-            thumbnailWidth: 66,
-            thumbnailHeight: 60,
+            thumbnailWidth: 94.5,
+            thumbnailHeight: 94.5,
         }
     }
 });
@@ -190,8 +304,19 @@ $(window).on('load resize', function() {
             swipeToSlide: true,
             slidesToScroll: 1
         });
+
+        $('.similar-items:not(.slick-initialized)').slick({
+            infinite: true,
+            arrows: false,
+            dots: false,
+            variableWidth: true,
+            slidesToShow: 1,
+            swipeToSlide: true,
+            slidesToScroll: 1
+        });
     } else {
         $(".products-items.slick-initialized").slick("unslick");
+        $(".similar-items.slick-initialized").slick("unslick");
 
     }
 
