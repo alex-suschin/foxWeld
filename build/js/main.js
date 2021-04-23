@@ -63,16 +63,7 @@ $(function() {
 
     $('.btn-cat-mob').click(function(e) {
         e.preventDefault();
-        $('.catalog-wrap__left').addClass('active');
-        $('html').addClass('ov-hidden');
-        $('#hamburger-icon').css('z-index', '0');
-    });
-
-    $('.close-cat').click(function(e) {
-        e.preventDefault();
-        $('.catalog-wrap__left').removeClass('active');
-        $('html').removeClass('ov-hidden');
-        $('#hamburger-icon').css('z-index', '999');
+        $('.catalog-categories').addClass('active');
     });
 
 
